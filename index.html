@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sketch</title>
+    <title>glifi</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -13,6 +13,68 @@
   </head>
 
   <body>
+    <div class="container">
+        <header>
+            <h1>FAMIGLIA DI GLIFI</h1>
+            <p class="subtitle">visualizzazione generativa di dati attraverso un linguaggio visivo coerente</p>
+        </header>
+
+        <div class="content">
+            <div id="canvas-container">
+                <canvas id="myCanvas"></canvas>
+            </div>
+
+            <aside class="legend">
+                <h2>LEGENDA</h2>
+                
+                <div class="legend-item">
+                    <div class="legend-label">
+                        1 - colore
+                    </div>
+                    <p class="legend-description">gradiente dal rosa al blu, controllato da column_2</p>
+                    <div class="color-gradient"></div>
+                </div>
+
+                <div class="legend-item">
+                    <div class="legend-label">
+                        2 - dimensione del cerchio
+                    </div>
+                    <p class="legend-description">scala globale del glifo, controllata da column_0</p>
+                </div>
+
+                <div class="legend-item">
+                    <div class="legend-label">
+                        3 - nucleo interno
+                    </div>
+                    <p class="legend-description">proporzione del cerchio centrale, controllata da column_3</p>
+                </div>
+
+                <div class="legend-item">
+                    <div class="legend-label">
+                        4 - rotazione
+                    </div>
+                    <p class="legend-description">orientamento del glifo, controllata da column_1</p>
+                </div>
+
+                <div class="legend-item">
+                    <div class="legend-label">
+                        5 - raggi radiali
+                    </div>
+                    <p class="legend-description">numero di linee interne, controllato da column_4</p>
+                </div>
+
+                <div class="legend-item" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0;">
+                    <div class="legend-label">
+                        6 - quadrato decorativo
+                    </div>
+                    <p class="legend-description">elemento invariante che mantiene la coerenza della famiglia</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+
     <script src="sketch.js"></script>
   </body>
 </html>
