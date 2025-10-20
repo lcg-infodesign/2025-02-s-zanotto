@@ -14,7 +14,6 @@ function setup() {
   let totalHeight = outerPadding * 2 + rows * itemSize + (rows - 1) * padding;
 
   createCanvas(windowWidth, totalHeight);
-  canvas.parent('canvas-container');
   background(245);
 
   let colCount = 0;
@@ -117,8 +116,4 @@ function drawGlyph(scale, rotation, glyphColor, proportion, complexity) {
   rotate(rotation + PI / 4);
   rect(-decorSize / 2, -decorSize / 2, decorSize, decorSize);
   pop();
-}
-
-function draw() {
-  // 
 }
