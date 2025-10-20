@@ -14,6 +14,7 @@ function setup() {
   let totalHeight = outerPadding * 2 + rows * itemSize + (rows - 1) * padding;
 
   createCanvas(windowWidth, totalHeight);
+  canvas.parent('canvas-container');
   background(245);
 
   let colCount = 0;
@@ -22,14 +23,14 @@ function setup() {
   for (let rowNumber = 0; rowNumber < table.getRowCount(); rowNumber++) {
     let data = table.getRow(rowNumber).obj;
 
-    // Estrai valori per le trasformazioni
+    // estrai valori per le trasformazioni
     let val0 = parseFloat(data["column0"]); // scala
     let val1 = parseFloat(data["column1"]); // rotazione
     let val2 = parseFloat(data["column2"]); // colore
     let val3 = parseFloat(data["column3"]); // proporzione interna
     let val4 = parseFloat(data["column4"]); // densità/complessità
 
-    // Normalizza i valori
+    // normalizza i valori
     let allValues0 = table.getColumn("column0").map(v => parseFloat(v));
     let allValues1 = table.getColumn("column1").map(v => parseFloat(v));
     let allValues2 = table.getColumn("column2").map(v => parseFloat(v));
@@ -118,3 +119,6 @@ function drawGlyph(scale, rotation, glyphColor, proportion, complexity) {
   pop();
 }
 
+function draw() {
+  // 
+}
